@@ -6,8 +6,10 @@
     <title>CSS :not() selector test</title>
 </head>
 <body>
+    <h1>Chrome performance bug with :not() selector</h1>
     <p><a href="fast.html">This is the fast example</a></p>
     <p><a href="slow.html">This is the slow example</a></p>
     <p>Use the performance debugger to monitor the performance when clicking the "Add DOM Nodes" button. You'll find the slow version spends a lot more time on the Recacluate Style task.</p>
+    <p>The two pages are identical except for the CSS selectors used. Both pages have 20,000 selectors, however the slow example makes use of the :not(p) selector.</p>
 </body>
 </html>
