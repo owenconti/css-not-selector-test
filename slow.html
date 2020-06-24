@@ -13,9 +13,11 @@
             const div = document.createElement('div');
 
             for (var i = 0; i < count; i++) {
-                const child = document.createElement('div');
-                child.textContent = 'A div in a list';
-                div.appendChild(child);
+                const parent = document.createElement('div');
+                const child = document.createElement('p');
+                child.textContent = 'A paragraph in a div in a list';
+                parent.appendChild(child);
+                div.appendChild(parent);
             }
             document.getElementsByTagName('body')[0].appendChild(div);
         }
